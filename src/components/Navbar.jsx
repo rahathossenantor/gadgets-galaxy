@@ -51,7 +51,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="flex items-center justify-center"><img src="https://i.ibb.co/qJk3bD4/basket.png" className="inline-block w-12" alt="logo" /><span className="text-[#e73c17] text-3xl">Xtech</span></a>
+                    <a className="flex items-center justify-center"><img src="https://i.ibb.co/qJk3bD4/basket.png" className="inline-block w-12" alt="logo" /><h3 className="text-3xl">Tech<span className="text-[#e73c17]">X</span> </h3></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
