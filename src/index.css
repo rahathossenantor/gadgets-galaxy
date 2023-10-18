@@ -1,3 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+    color: #e73c17;
+    text-decoration: underline;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+.bn632-hover {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.bn632-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.bn632-hover:focus {
+    outline: none;
+}
+.bn632-hover.bn28 {
+    background-image: linear-gradient(to right,
+    #e73c17,
+    #e73d17de,
+    #e73d17f0,
+    #e73c17);
+    box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+}
