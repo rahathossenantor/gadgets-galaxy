@@ -8,6 +8,7 @@ const Navbar = () => {
 
     const links = <>
         <NavLink to="/"><li className="text-base px-3 hover:text-[#e73c17] uppercase">Home</li></NavLink>
+        <NavLink to="/add-product"><li className="text-base px-3 hover:text-[#e73c17] uppercase">Add Product</li></NavLink>
         <NavLink to="/login"><li className="text-base px-3 hover:text-[#e73c17] uppercase">Login</li></NavLink>
         <NavLink to="/register"><li className="text-base px-3 hover:text-[#e73c17] uppercase">Register</li></NavLink>
         <NavLink to="/profile"><li className="text-base px-3 hover:text-[#e73c17] uppercase">Profile</li></NavLink>
@@ -53,7 +54,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="flex items-center justify-center"><img src="https://i.ibb.co/qJk3bD4/basket.png" className="inline-block w-12" alt="logo" /><h3 className="text-3xl">Tech<span className="text-[#e73c17] font-semibold">X</span> </h3></a>
+                    <a className="flex items-center justify-center"><img src="https://i.ibb.co/jyXWdYX/images.jpg" className="inline-block w-12" alt="logo" /><h3 className="text-3xl ml-1">Tech<span className="text-[#F07C19] font-semibold">X</span> </h3></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
