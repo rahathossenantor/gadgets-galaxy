@@ -45,3 +45,8 @@ body {
     #e73c17);
     box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
 }
+
+.spesial-bg {
+    background: url("https://htmldemo.net/elehaus/elehaus/assets/images/slider/slider1-shape1.png") no-repeat;
+    background-position: bottom;
+}

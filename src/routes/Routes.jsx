@@ -5,6 +5,8 @@ import AuthProvider from "../providers/AuthProvider";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import NotFound from "../pages/NotFound";
+import Profile from "../pages/Profile";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>
+            },
+            {
+                path: "/profile",
+                element: <PrivateRoutes><Profile></Profile></PrivateRoutes>
             }
         ]
     }
