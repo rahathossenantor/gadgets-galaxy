@@ -29,6 +29,11 @@ const featuresData = [
 const Features = () => {
     return (
         <div className="md:container md:mx-auto 2xl:px-0 xl:px-0 lg:px-5 md:px-5 px-5 my-20">
+            <div className="text-center">
+                <h2 className="text-4xl font-semibold">Our exclusive <span className="text-[#e73c17]">Features</span></h2>
+                <p className="text-lg mb-5">We provide the best services</p>
+            </div>
+
             <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
                 {
                     featuresData.map((data) => <div key={data.id} className="border rounded-xl shadow-lg flex items-center justify-center p-5 gap-5">

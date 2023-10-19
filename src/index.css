@@ -42,6 +42,8 @@ body {
 
 .no-radius {
     border-radius: 7px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .bn632-hover.bn28 {

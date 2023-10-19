@@ -43,7 +43,7 @@ const Brands = () => {
         <div className="md:container md:mx-auto 2xl:px-0 xl:px-0 lg:px-5 md:px-5 px-5 my-20">
             <div className="text-center">
                 <h2 className="text-4xl font-semibold">Discover Our <span className="text-[#e73c17]">Brands</span></h2>
-                <p className="text-lg mb-5">Explore our world class luxary brand</p>
+                <p className="text-lg mb-5">Explore our world class luxary brands</p>
             </div>
 
             <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
