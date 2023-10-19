@@ -10,8 +10,18 @@ const PrivateRoutes = ({ children }) => {
 
     if (loading) {
         return (
-            <div className="text-center h-screen flex items-center justify-center">
-                <span className="loading loading-spinner loading-lg"></span>
+            <div className="text-center h-screen flex items-center justify-center h-70-screen">
+                {/* <span className="loading loading-spinner loading-lg"></span> */}
+
+                <div className="loader">
+                    <div className="loader__bar"></div>
+                    <div className="loader__bar"></div>
+                    <div className="loader__bar"></div>
+                    <div className="loader__bar"></div>
+                    <div className="loader__bar"></div>
+                    <div className="loader__ball"></div>
+                </div>
+
             </div>
         );
     }

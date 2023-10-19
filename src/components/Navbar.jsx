@@ -66,10 +66,12 @@ const Navbar = () => {
                     </div>
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-2 2xl:inline-flex xl:inline-flex lg:inline-flex md:inline-flex hidden">
                         <div className="w-10 rounded-full">
-                            <img src={profileAvatar ? profileAvatar : "https://i.ibb.co/bKkKVMn/user.png"} className="inline-block w-full" />
+                            <Link to="/profile">
+                                <img src={profileAvatar ? profileAvatar : "https://i.ibb.co/bKkKVMn/user.png"} className="inline-block w-full" />
+                            </Link>
                         </div>
                     </label>
-                    <Link to={!user && "/login"}><button onClick={user && logOut} className="bn632-hover bn28 px-[30px] py-[8px] font-poppins">{user ? "LogOut" : "LogIn"}</button></Link>
+                    <Link to={!user && "/login"}><button onClick={user && logOut} className="bn632-hover bn19 px-[30px] py-[8px]">{user ? "LogOut" : "LogIn"}</button></Link>
                 </div>
             </div>
         </nav>
