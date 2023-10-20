@@ -12,6 +12,7 @@ const Navbar = () => {
         <NavLink to="/login"><li className="text-base px-3 hover:text-[#e73c17] uppercase">Login</li></NavLink>
         <NavLink to="/register"><li className="text-base px-3 hover:text-[#e73c17] uppercase">Register</li></NavLink>
         <NavLink to="/profile"><li className="text-base px-3 hover:text-[#e73c17] uppercase">Profile</li></NavLink>
+        <NavLink to="/my-cart"><li className="text-base px-3 hover:text-[#e73c17] uppercase">My Cart</li></NavLink>
     </>
 
     // logout user

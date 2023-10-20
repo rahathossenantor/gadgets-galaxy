@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 
 const brandsData = [
     {
@@ -39,6 +40,8 @@ const brandsData = [
 ];
 
 const Brands = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="md:container md:mx-auto 2xl:px-0 xl:px-0 lg:px-5 md:px-5 px-5 my-20">
             <div className="text-center">
@@ -48,11 +51,10 @@ const Brands = () => {
 
             <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
                 {
-                    brandsData.map(brand => <div key={brand.id} className="border rounded-xl shadow-lg flex flex-col items-center justify-center p-5">
+                    brandsData.map(brand => <div key={brand.id} onClick={() => navigate(`/brand/${brand.id}`)} className="border cursor-pointer rounded-xl shadow-lg flex flex-col items-center justify-center p-5">
                         <img src={brand.image} className={`inline-block ${brand.width}`} alt="brand-logo" />
                         <div className="text-center">
                             <h4 className="text-4xl mt-2 font-semibold">{brand.brandName}</h4>
-                            <button className="explore-btn text-[#e73c17] font-semibold mt-3 px-[30px] py-[8px]">Explore</button>
                         </div>
                     </div>)
                 }
