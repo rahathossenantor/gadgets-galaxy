@@ -7,7 +7,7 @@ const reviewsData = [
         "image": "https://htmldemo.net/elehaus/elehaus/assets/images/photos/client1.png",
         "ratings": <div className="rating">
             <input type="radio" name="rating-1" className="mask mask-star" />
-            <input type="radio" name="rating-1" className="mask mask-star" checked />
+            <input type="radio" name="rating-1" className="mask mask-star" defaultChecked />
             <input type="radio" name="rating-1" className="mask mask-star" />
             <input type="radio" name="rating-1" className="mask mask-star" />
             <input type="radio" name="rating-1" className="mask mask-star" />
@@ -22,7 +22,7 @@ const reviewsData = [
             <input type="radio" name="rating-2" className="mask mask-star" />
             <input type="radio" name="rating-2" className="mask mask-star" />
             <input type="radio" name="rating-2" className="mask mask-star" />
-            <input type="radio" name="rating-2" className="mask mask-star" checked />
+            <input type="radio" name="rating-2" className="mask mask-star" defaultChecked />
             <input type="radio" name="rating-2" className="mask mask-star" />
         </div>
     },
@@ -33,7 +33,7 @@ const reviewsData = [
         "image": "https://htmldemo.net/elehaus/elehaus/assets/images/photos/client2.png",
         "ratings": <div className="rating">
             <input type="radio" name="rating-3" className="mask mask-star" />
-            <input type="radio" name="rating-3" className="mask mask-star" checked />
+            <input type="radio" name="rating-3" className="mask mask-star" defaultChecked />
             <input type="radio" name="rating-3" className="mask mask-star" />
             <input type="radio" name="rating-3" className="mask mask-star" />
             <input type="radio" name="rating-3" className="mask mask-star" />
@@ -49,7 +49,7 @@ const reviewsData = [
             <input type="radio" name="rating-4" className="mask mask-star" />
             <input type="radio" name="rating-4" className="mask mask-star" />
             <input type="radio" name="rating-4" className="mask mask-star" />
-            <input type="radio" name="rating-4" className="mask mask-star" checked />
+            <input type="radio" name="rating-4" className="mask mask-star" defaultChecked />
         </div>
     }
 ];

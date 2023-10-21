@@ -42,21 +42,22 @@ const router = createBrowserRouter([
             {
                 path: "/brand/:brandName",
                 element: <BrandDetails></BrandDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brandName}`)
+                loader: ({ params }) => fetch(`https://gadgets-galaxy-server.vercel.app/products/${params.brandName}`)
             },
             {
                 path: "/product/:productId",
                 element: <PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.productId}`)
+                loader: ({ params }) => fetch(`https://gadgets-galaxy-server.vercel.app/product/${params.productId}`)
             },
             {
                 path: "/product-details/:productId",
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.productId}`)
+                loader: ({ params }) => fetch(`https://gadgets-galaxy-server.vercel.app/product/${params.productId}`)
             },
             {
                 path: "/my-cart",
-                element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>
+                element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
+                loader: () => fetch(`https://gadgets-galaxy-server.vercel.app/cart`)
             }
         ]
     }

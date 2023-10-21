@@ -20,7 +20,7 @@ const UpdateProduct = () => {
         const updatedProduct = { productName, brand, productType, price, ratings, details, photo };
 
         try {
-            const res = await fetch(`http://localhost:5000/update-product/${data._id}`, {
+            const res = await fetch(`https://gadgets-galaxy-server.vercel.app/update-product/${data._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"

@@ -1,12 +1,30 @@
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ProductDetails = () => {
     const product = useLoaderData();
+    const [cartItems, setCartItems] = useState([]);
+
+    useEffect(() => {
+        fetch(`https://gadgets-galaxy-server.vercel.app/cart`)
+            .then(res => res.json())
+            .then(data => setCartItems(data));
+    }, []);
 
     const addToCart = async (product) => {
+        const isExists = cartItems.find(item => item.id === product.id)
+        if (!isExists) {
+            Swal.fire({
+                title: "Error!",
+                text: "Product already added!",
+                icon: "error",
+                confirmButtonText: "Close"
+            });
+            return
+        }
         try {
-            const res = await fetch("http://localhost:5000/cart", {
+            const res = await fetch("https://gadgets-galaxy-server.vercel.app/cart", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -41,7 +59,7 @@ const ProductDetails = () => {
                         <div className="flex gap-5">
                             <h3 className="text-[19px] flex gap-1">Ratings: <span className="font-semibold">{product?.ratings} out of 5</span>
                                 <div className="rating">
-                                    <input type="radio" name="rating-2" className="mask mask-star bg-orange-400" checked />
+                                    <input type="radio" name="rating-2" className="mask mask-star bg-orange-400" defaultChecked />
                                 </div>
                             </h3>
                             <h3 className="text-[19px]">Category: <span className="font-semibold">{product?.productType}</span></h3>

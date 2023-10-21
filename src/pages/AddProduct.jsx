@@ -18,7 +18,7 @@ const AddProduct = () => {
         const product = { productName, brand, productType, price, ratings, details, photo };
 
         try {
-            const res = await fetch("http://localhost:5000/add-product", {
+            const res = await fetch("https://gadgets-galaxy-server.vercel.app/add-product", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
