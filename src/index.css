@@ -46,6 +46,10 @@ body {
     border-bottom-left-radius: 0px;
 }
 
+.radius-none {
+    border-radius: 7px;
+}
+
 .bn632-hover.bn28 {
     background-image: linear-gradient(to right,
             #e73c17,
