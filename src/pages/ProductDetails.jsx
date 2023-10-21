@@ -13,15 +13,16 @@ const ProductDetails = () => {
     }, []);
 
     const addToCart = async (product) => {
-        const isExists = cartItems.find(item => item.id === product.id)
-        if (!isExists) {
+        const isExists = cartItems.find(item => product._id === item._id);
+
+        if (isExists) {
             Swal.fire({
                 title: "Error!",
                 text: "Product already added!",
                 icon: "error",
                 confirmButtonText: "Close"
             });
-            return
+            return;
         }
         try {
             const res = await fetch("https://gadgets-galaxy-server.vercel.app/cart", {
@@ -39,6 +40,7 @@ const ProductDetails = () => {
                     icon: "success",
                     confirmButtonText: "Close"
                 });
+                history.back();
             }
         } catch (err) {
             console.error(err.message);

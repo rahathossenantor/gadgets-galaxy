@@ -1,5 +1,5 @@
 # Welcome to Gadget Galaxy
-<h2>Live website link: <a href="https://gadget-galaxy-gg.web.app/" target="_blank">https://gadget-galaxy-gg.web.app/</a></h2>
+<h2>Live website link: <a href="https://gadgets-galaxy.netlify.app/" target="_blank">https://gadgets-galaxy.netlify.app/</a></h2>
 <br/>
 
 <section>
