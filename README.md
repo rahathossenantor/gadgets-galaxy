@@ -1,8 +1,23 @@
-# React + Vite
+# Welcome to Gadget Galaxy
+<h2>Live website link: <a href="https://gadget-galaxy-gg.web.app/" target="_blank">https://gadget-galaxy-gg.web.app/</a></h2>
+<br/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<section>
+    <article>
+        <p>প্রতিটি ওয়েব এপ্লিকেশনের জন্যই ডকুমেন্টেশন মেইনটেইন করা অত্যন্ত জরুরী একটি ব্যাপার। এতে করে ব্যবহারকারীরা খুব সহজেই অ্যাপ্লিকেশনটির ফিচারসহ অন্যান্য সকল বিষয়ে ধারণা পেতে পারে। এই ওয়েব এপ্লিকেশনটিও এর ব্যতিক্রম নয়। তাই ব্যবহারকারীর সুবিধার্থে নিচে এপ্লিকেশনটির কিছু বিশেষ ফিচারস নিয়ে আলোচনা করা হলো।</p>
+        <ol>
+            <li>এই ওয়েবসাইটটি সম্পূর্ণ ডায়নামিক ভাবে তৈরি কৃত। অর্থাৎ এখানে দেখানো সকল তথ্য একটি ওয়েব রিকুয়েস্টের মাধ্যমে সরাসরি ডেটাবেজ থেকে লোড করে দেখানো হয়েছে, যা ব্যবহারকারীকে বিশেষ সুবিধা দেয়।</li>
+            <li>ওয়েবসাইট দিয়ে একটি ই-কমার্স ওয়েবসাইট। যেখানে কাস্টমাররা তাদের প্রয়োজন অনুযায়ী প্রযুক্তি পণ্য ক্রয় করতে পারবে।</li>
+            <li>ব্যবহারকারীরা ওয়েবসাইটটিতে তাদের ইমেইল এবং পাসওয়ার্ড দিয়ে রেজিস্ট্রেশন ও লগইন করতে পারবে।</li>
+            <li>ব্যবহারকারীরা চাইলে ইমেইল পাসওয়ার্ড ব্যবহার না করেও সরাসরি তাদের Google বা GitHub একাউন্ট ব্যবহার করেও রেজিস্ট্রেশন বা লগইন করতে পারবে।</li>
+            <li>প্রতিটি প্রোডাক্ট এর details page private route দ্বারা protected হওয়ায় কাস্টমাররা তা সরাসরি দেখতে পাবেনা।
+যদি কোন কাস্টমার প্রোডাক্ট এর details page দেখতে চায় তবে তাকে অবশ্যই লগইন অবস্থায় থাকতে হবে।</li>
+            <li>অ্যাপ্লিকেশনটি সম্পূর্ণভাবে রেসপন্সিভ করা হয়েছে। যাতে করে যে কোন ডিভাইস থেকেই এপ্লিকেশনটি ব্যবহার করা যায়।</li>
+        </ol>
+        <p>এই ছিল ওয়েব অ্যাপ্লিকেশনটির বিশেষ কিছু ফাংশনালিটি। আশা করি এর মাধ্যমে ব্যবহারকারীরা খুব সহজেই অ্যাপ্লিকেশনটির ফিচারস সম্পর্কে ধারণা পাবে।
+        ধন্যবাদ।</p>
+    </article>
+</section>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br/>
+<hr/>
