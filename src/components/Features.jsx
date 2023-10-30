@@ -36,7 +36,7 @@ const Features = () => {
 
             <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
                 {
-                    featuresData.map((data) => <div key={data.id} className="border rounded-xl shadow-lg flex items-center justify-center p-5 gap-5">
+                    featuresData.map((data) => <div key={data.id} className="border rounded-lg shadow-lg flex items-center justify-center p-5 gap-5">
                         <img src={data.image} className="inline-block mb-2 w-12" alt="features-icon" />
                         <div>
                             <h4 className="text-lg font-semibold">{data.title}</h4>

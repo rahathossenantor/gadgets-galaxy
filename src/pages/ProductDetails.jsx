@@ -59,11 +59,21 @@ const ProductDetails = () => {
                         <h4 className="text-[25px]">Brand: <span className="font-semibold">{product?.brand}</span></h4>
                         <h3 className="text-[34px] my-1">Price: $<span className="font-semibold">{product?.price}</span></h3>
                         <div className="flex gap-5">
-                            <h3 className="text-[19px] flex gap-1">Ratings: <span className="font-semibold">{product?.ratings} out of 5</span>
-                                <div className="rating">
-                                    <input type="radio" name="rating-2" className="mask mask-star bg-orange-400" defaultChecked />
-                                </div>
-                            </h3>
+                            <div className="rating">
+                                {
+                                    new Array(parseInt(product.ratings)).fill(1).map((ratings, i) =>
+                                        <input key={i}
+                                            type="radio" name={`rating-${product._id}`}
+                                            className="mask mask-star bg-orange-400"
+                                            defaultChecked />
+                                    )
+                                }
+                                {
+                                    new Array(5 - parseInt(product.ratings)).fill(1).map((ratings, i) =>
+                                        <input key={i} type="radio" name={`rating-${product._id}`} className="mask mask-star bg-orange-400" />
+                                    )
+                                }
+                            </div>
                             <h3 className="text-[19px]">Category: <span className="font-semibold">{product?.productType}</span></h3>
                         </div>
                         <p className="text-[19px] font-semibold">{product.brand} Store 1 Year Official Warranty Support</p>

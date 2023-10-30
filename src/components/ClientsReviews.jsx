@@ -64,7 +64,7 @@ const ClientsReviews = () => {
 
             <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
                 {
-                    reviewsData.map(review => <div key={review.id} className="border rounded-xl shadow-lg flex items-center justify-center p-5 gap-5">
+                    reviewsData.map(review => <div key={review.id} className="border rounded-lg shadow-xl flex items-center justify-center p-5 gap-5">
                         <div className="text-center">
                             <img src={review.image} className="inline-block mb-2 w-20 h-20 rounded-full" alt="client" />
                             <div>

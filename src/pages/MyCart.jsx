@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MyCart = () => {
@@ -35,7 +35,7 @@ const MyCart = () => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 "Deleted!",
-                                "Your coffee has been deleted.",
+                                "Your product has been deleted.",
                                 "success"
                             );
                             const updatedProducts = cartData.filter(pd => pd._id !== id);
@@ -64,7 +64,7 @@ const MyCart = () => {
         <div className="md:container md:mx-auto 2xl:px-0 xl:px-0 lg:px-5 md:px-5 px-5">
             <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 my-10">
                 {
-                    cartData.length !== 0 && cartData.slice(0, dataLength).map(product => <div key={product?._id} className="border shadow-xl">
+                    cartData.length !== 0 && cartData.slice(0, dataLength).map(product => <div key={product?._id} className="border rounded-lg shadow-xl">
                         <figure className="w-full">
                             <div className="rounded-md flex items-center justify-center p-5 pb-0">
                                 <img className="inline-block rounded-lg h-60 rounded-b-none" src={product?.photo} alt="product-image" />
@@ -78,21 +78,34 @@ const MyCart = () => {
                             </div>
                             <div className="flex justify-between mb-2">
                                 <h3 className="text-[19px]">Price: $<span className="font-semibold">{product?.price}</span></h3>
-                                <h3 className="text-[19px] flex gap-1">Ratings: <span className="font-semibold">{product?.ratings}/5</span>
-                                    <div className="rating">
-                                        <input type="radio" name="rating-2" className="mask mask-star bg-orange-400" />
-                                    </div>
-                                </h3>
+                                <div className="rating">
+                                    {
+                                        new Array(parseInt(product.ratings)).fill(1).map((ratings, i) =>
+                                            <input key={i}
+                                                type="radio" name={`rating-${product._id}`}
+                                                className="mask mask-star bg-orange-400"
+                                                defaultChecked />
+                                        )
+                                    }
+                                    {
+                                        new Array(5 - parseInt(product.ratings)).fill(1).map((ratings, i) =>
+                                            <input key={i} type="radio" name={`rating-${product._id}`} className="mask mask-star bg-orange-400" />
+                                        )
+                                    }
+                                </div>
                             </div>
                             <p className="mb-3">{product?.details}</p>
-                            <button onClick={() => deleteProduct(product?._id)} className="bn632-hover bn28 px-[30px] py-[8px] radius-none">Delete</button>
+                            <div className="flex gap-5">
+                                <Link to={`/product-details/${product._id}`}><button className="bn632-hover bn28 px-[30px] py-[8px] radius-none">Details</button></Link>
+                                <button onClick={() => deleteProduct(product?._id)} className="bn632-hover bn28 px-[30px] py-[8px] radius-none">Delete</button>
+                            </div>
                         </div>
                     </div>)
                 }
             </div>
             {cartData.length === 0 && noItemsYet}
             {
-                cartData.length > 4 && showAllToggleBtn
+                cartData.length > 6 && showAllToggleBtn
             }
         </div>
     );

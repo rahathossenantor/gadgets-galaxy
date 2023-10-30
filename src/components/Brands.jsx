@@ -51,7 +51,7 @@ const Brands = () => {
 
             <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
                 {
-                    brandsData.map(brand => <div key={brand.id} onClick={() => navigate(`/brand/${brand.brandName}`)} className="border cursor-pointer rounded-xl shadow-lg flex flex-col items-center justify-center p-5">
+                    brandsData.map(brand => <div key={brand.id} onClick={() => navigate(`/brand/${brand.brandName}`)} className="border cursor-pointer rounded-lg shadow-xl flex flex-col items-center justify-center p-5">
                         <img src={brand.image} className={`inline-block ${brand.width}`} alt="brand-logo" />
                         <div className="text-center">
                             <h4 className="text-4xl mt-2 font-semibold">{brand.brandName}</h4>

@@ -5,7 +5,6 @@ import AuthProvider from "../providers/AuthProvider";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import NotFound from "../pages/NotFound";
-import Profile from "../pages/Profile";
 import PrivateRoutes from "./PrivateRoutes";
 import AddProduct from "../pages/AddProduct";
 import MyCart from "../pages/MyCart";
@@ -30,10 +29,6 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>
-            },
-            {
-                path: "/profile",
-                element: <PrivateRoutes><Profile></Profile></PrivateRoutes>
             },
             {
                 path: "/add-product",
