@@ -51,8 +51,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/my-cart",
-                element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-                loader: () => fetch(`https://gadgets-galaxy-server.vercel.app/cart`)
+                element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>
             }
         ]
     }

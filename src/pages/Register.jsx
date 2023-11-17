@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 const Register = () => {
     const [isShow, setIsShow] = useState(false);
     const [errorStatus, setRrrorStatus] = useState("");
-    const {setProfileAvatar, registerUserWithEmailAndPass, signInUserWithGoogle, signInUserWithGitHub } = useContext(AuthContext);
+    const { setProfileAvatar, registerUserWithEmailAndPass, signInUserWithGoogle, signInUserWithGitHub } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -143,8 +143,8 @@ const Register = () => {
                     <div className="text-center">
                         <p className="text-xl mb-2">-------------or-------------</p>
                         <div className="flex items-center justify-center gap-5">
-                            <button onClick={handleGoogleRegister}><img src="https://i.ibb.co/7j9whwL/search.png" className="w-10 cursor-pointer" alt="Google" /></button>
-                            <button onClick={handleGitHubRegister}><img src="https://i.ibb.co/vxj4vrN/github.png" className="w-10 cursor-pointer" alt="GtHub" /></button>
+                            <a onClick={handleGoogleRegister}><img src="https://i.ibb.co/7j9whwL/search.png" className="w-10 cursor-pointer" alt="Google" /></a>
+                            <a onClick={handleGitHubRegister}><img src="https://i.ibb.co/vxj4vrN/github.png" className="w-10 cursor-pointer" alt="GtHub" /></a>
                         </div>
                     </div>
                 </form>

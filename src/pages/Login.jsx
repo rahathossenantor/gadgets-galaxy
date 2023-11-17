@@ -115,8 +115,8 @@ const Login = () => {
                     <div className="text-center">
                         <p className="text-xl mb-2">-------------or-------------</p>
                         <div className="flex items-center justify-center gap-5">
-                            <button onClick={handleGoogleSignIn}><img src="https://i.ibb.co/7j9whwL/search.png" className="w-10 cursor-pointer" alt="Google" /></button>
-                            <button onClick={handleGitHubSignIn}><img src="https://i.ibb.co/vxj4vrN/github.png" className="w-10 cursor-pointer" alt="GtHub" /></button>
+                            <a onClick={handleGoogleSignIn}><img src="https://i.ibb.co/7j9whwL/search.png" className="w-10 cursor-pointer" alt="Google" /></a>
+                            <a onClick={handleGitHubSignIn}><img src="https://i.ibb.co/vxj4vrN/github.png" className="w-10 cursor-pointer" alt="GtHub" /></a>
                         </div>
                     </div>
                 </form>

@@ -1,21 +1,23 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../providers/AuthProvider";
 
 const ProductDetails = () => {
     const product = useLoaderData();
+    const { user } = useContext(AuthContext);
     const [cartItems, setCartItems] = useState([]);
 
     useEffect(() => {
-        fetch(`https://gadgets-galaxy-server.vercel.app/cart`)
+        fetch(`https://gadgets-galaxy-server.vercel.app/cart/${user?.email}`)
             .then(res => res.json())
             .then(data => setCartItems(data));
-    }, []);
+    }, [user?.email]);
 
     const addToCart = async (product) => {
-        const isExists = cartItems.find(item => product._id === item._id);
+        const isExist = cartItems.find(item => product._id === item._id);
 
-        if (isExists) {
+        if (isExist) {
             Swal.fire({
                 title: "Error!",
                 text: "Product already added!",
@@ -25,12 +27,16 @@ const ProductDetails = () => {
             return;
         }
         try {
+            const productData = {
+                _id: product._id,
+                userEmail: user?.email
+            };
             const res = await fetch("https://gadgets-galaxy-server.vercel.app/cart", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(product)
+                body: JSON.stringify(productData)
             });
             const result = await res.json();
             if (result.insertedId) {

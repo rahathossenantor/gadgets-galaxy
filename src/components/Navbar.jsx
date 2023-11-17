@@ -64,14 +64,18 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <div className="2xl:inline-flex xl:inline-flex lg:hidden md:inline-flex hidden">
-                        <h3 className="mr-2 text-lg font-poppins">{user ? user?.displayName?.length > 10 ? user.displayName.slice(0, 10) : user.displayName : ""}</h3>
+                        <h3 className="mr-2 text-lg font-poppins">{user ? user?.displayName?.length > 15 ? user.displayName.slice(0, 15) : user.displayName : ""}</h3>
                     </div>
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-2 2xl:inline-flex xl:inline-flex lg:inline-flex md:hidden hidden">
-                        <div className="w-10 rounded-full">
-                            <img src={profileAvatar ? profileAvatar : "https://i.ibb.co/bKkKVMn/user.png"} className="inline-block w-full" />
-                        </div>
-                    </label>
-                    <Link to={!user && "/login"}><button onClick={user && logOut} className="bn632-hover bn19 px-[20px] py-[6px] mr-3">{user ? "LogOut" : "LogIn"}</button></Link>
+                    <div className="dropdown dropdown-end mr-2">
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img alt="Tailwind CSS Navbar component" src={profileAvatar ? profileAvatar : "https://i.ibb.co/bKkKVMn/user.png"} />
+                            </div>
+                        </label>
+                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-40">
+                            <li onClick={user && logOut}><Link to={!user && "/login"} className="text-base">{user ? "LogOut" : "LogIn"}</Link></li>
+                        </ul>
+                    </div>
                     <Switch></Switch>
                 </div>
             </div>

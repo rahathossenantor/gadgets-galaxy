@@ -1,12 +1,20 @@
-import { useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../providers/AuthProvider";
 
 const MyCart = () => {
-    const loadedData = useLoaderData();
-    const [cartData, setCartData] = useState(loadedData);
+    const { user } = useContext(AuthContext);
+
+    const [cartData, setCartData] = useState([]);
     const [dataLength, setDataLength] = useState(6);
     const [isShowAll, setIsShowAll] = useState(false);
+
+    useEffect(() => {
+        fetch(`https://gadgets-galaxy-server.vercel.app/cart/${user?.email}`)
+            .then(res => res.json())
+            .then(data => setCartData(data));
+    }, [user?.email]);
 
     const handleIsShowAll = () => {
         if (dataLength === 6) {
@@ -31,15 +39,14 @@ const MyCart = () => {
                 fetch(`https://gadgets-galaxy-server.vercel.app/cart/${id}`, { method: "DELETE" })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
-                        if (data.deletedCount > 0) {
+                        if (data.deletedCount) {
+                            const updatedProducts = cartData.filter(pd => pd._id !== id);
+                            setCartData(updatedProducts);
                             Swal.fire(
                                 "Deleted!",
                                 "Your product has been deleted.",
                                 "success"
                             );
-                            const updatedProducts = cartData.filter(pd => pd._id !== id);
-                            setCartData(updatedProducts);
                         }
                     })
                     .catch(err => console.log(err.message));
